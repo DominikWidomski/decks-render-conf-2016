@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>RenderConf – 2016, Oxford, UK</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../libs/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../libs/reveal.js/css/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../libs/reveal.js/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section id="title">
+					<h1>RenderConf 2016</h1>
+					<h3>Oxford, UK</h3>
+					<p>
+						<small>Attendees: Ben / Dom / Ed / Ian / Paddy / Sam</small>
+					</p>
+				</section>
+
+				<section id="abstract">
+					<h2>Abstract</h2>
+					<ul>
+						<li>Overview of RenderConf2016</li>
+						<li>Overview of talks
+							<ul>
+								<li>Key points</li>
+								<li>Lessons learned</li>
+							</ul>
+						</li>
+						<li>Recap</li>
+						<li>Evaluation</li>
+					</ul>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section id="nested-one">
+						<h2>Vertical Slides</h2>
+						<p>Slides can be nested inside of each other.</p>
+						<p>Use the <em>Space</em> key to navigate through all slides.</p>
+						<br>
+						<a href="#" class="navigate-down">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section id="nested-two">
+						<h2>Basement Level 1</h2>
+						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+					</section>
+					<section>
+						<h2>Basement Level 2</h2>
+						<p>That's it, time to go back up.</p>
+						<br>
+						<a href="#/2">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+						</a>
+					</section>
+				</section>
+
+				<section id="lawson">
+					<section>
+						<h2>Bruce Lawson</h2>
+						<h3>web.next</h3>
+						<p class="fragment">
+							The web is under threat from native platforms...
+						</p>
+						<p class="fragment">
+							... or rather, it was.
+						</p>
+					</section>
+
+					<section>
+						<ul>
+							<li>What do consumers want?</li>
+							<li>People have moved to native apps <small>(80% apps vs 20% web)</small></li>
+							<!-- People want native experiences, ease of access, offline accessibility, data resiliance etc. -->
+							<li>Storage on mobiles is often preferred to be used for personal data
+								<ul>
+									<li>Users will sacrifice app storage for more photos, videos, messages etc.</li>
+									<li>Important in areas of the world with more constraints on downloading data</li>
+								</ul>
+							</li>
+							<li>Web apps require less storage to install</li>
+							<!-- the baseline is the shortcut to the web app -->
+							<li></li>
+						</ul>
+					</section>
+
+					<section>
+						<ul>
+							<li>AppCache - Confusing, unclear, obfuscated manifest based API, magical black box</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Progressive Web Apps</h3>
+						<ul>
+							<li class="fragment">Icon on homescreen</li>
+							<li class="fragment">Splash Screen</li>
+							<li class="fragment">Integrated with device</li>
+							<!-- First level citizen in the apps carousel if you choose so, which is specified by... -->
+							<li class="fragment">Manifest file in JSON</li>
+							<!-- Much like android development ? -->
+						</ul>
+					</section>
+
+					<section>
+						<h3>Service Workers!</h3>
+						<ul>
+							<li class="fragment">Extensible web manifest</li>
+							<li class="fragment">Offline network handling</li>
+							<li class="fragment">Fetch API</li>
+							<li class="fragment">Cache</li>
+							<li class="fragment">Background Sync</li>
+							<li class="fragment">Push</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Other incoming APIs</h3>
+						<ul>
+							<li class="fragment">Parser API</li>
+							<li class="fragment">Font metrics API</li>
+							<li class="fragment">Custom Paint API</li>
+							<li class="fragment">Composited Scrolling (Worker)</li>
+							<li class="fragment">CSS Regions</li>
+							<li class="fragment">Bluetooth</li>
+							<li class="fragment">Houdini</li>
+							<li class="fragment">CSS Custom Properties</li>
+							<li class="fragment">Geo fencing</li>
+							<li class="fragment">Intersection Observer</li>
+							<li class="fragment">JS Modules</li>
+							<li class="fragment">WebNFC</li>
+							<li class="fragment">WebUSB</li>
+							<li class="fragment">Web Animations</li>
+							<li class="fragment">Offscreen Canvas</li>
+							<li class="fragment">WebGL2</li>
+						</ul>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>Jack Franklin</h2>
+						<h3>jQuery pasty and present</h3>
+						<p>How jQuery influences the web</p>
+					</section>
+
+					<section>
+						<p>Original jQuery source code is available with annotations</p>
+
+						<div data-markdown>
+							<script type="text/template">
+								```
+								<section data-markdown>
+								  ## Paste some jquery source
+
+								  ...
+								</section>
+								```
+							</script>
+						</div>
+						<a href="#" title="">source</a> (Search “support:”)
+					</section>
+
+					<section>
+						<p><b>10 things I learned from jQuery</b> <small>Paul Irish</small></p>
+
+						<div>
+							<video controls>
+								<source src="https://www.youtube.com/watch?v=i_qE1iAmjFg">
+								<source src="">
+								<object type="video/ogg" data="https://www.youtube.com/watch?v=i_qE1iAmjFg" width="320" height="240">
+								<param name="src" value="https://www.youtube.com/watch?v=i_qE1iAmjFg">
+								<param name="autoplay" value="false">
+								<param name="autoStart" value="0">
+								<p><a href="https://www.youtube.com/watch?v=i_qE1iAmjFg">Download this video file.</a></p>
+								</object>
+							</video>
+						</div>
+
+						<a href="https://www.youtube.com/watch?v=i_qE1iAmjFg" title="">https://www.youtube.com/watch?v=i_qE1iAmjFg</a>
+
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>Val Head</h2>
+						<h3>Designing meaningful animation</h3>
+					</section>
+
+					<section>
+						<p>
+							The different aspects of the 12 principles give different characteristics to and help convey the personality of objects being animated, causing them to be perceived differently.
+						</p>
+					</section>
+
+					<section>
+						<ul>
+							<li>Animation should translate actions</li>
+							<!-- Animations convey -->
+							<li>‘The Illusion of Life’ by Disney (by Frank Thomas, Ollie Johnston)</li>
+							<li>12 Principles of animation (3 mentioned)
+								<ul>
+									<li>Timing ~ velocity - duration</li>
+									<li>Spacing ~ acceleration - easing</li>
+									<li>Follow through - overshoot</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<p>Resources</p>
+
+						<ul>
+							<li>Cubicbezier.com</li>
+							<li>Uianimationnewsletter.com</li>
+							<li>Chrome DevTools for animation</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Alicia Sedlock</h2>
+						<h3>Front end testing</h3>
+					</section>
+				</section>
+
+				<section>
+					<section data-background="#dddddd">
+						<h2>Slide Backgrounds</h2>
+						<p>
+							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
+						</p>
+						<a href="#" class="navigate-down">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
+						<h2>Image Backgrounds</h2>
+						<pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
+					</section>
+					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
+						<h2>Tiled Backgrounds</h2>
+						<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
+					</section>
+					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
+						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+							<h2>Video Backgrounds</h2>
+							<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
+						</div>
+					</section>
+					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+						<h2>... and GIFs!</h2>
+					</section>
+				</section>
+
+				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
+					<h2>Background Transitions</h2>
+					<p>
+						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
+					</p>
+					<pre><code class="hljs">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
+				</section>
+
+				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+					<h2>Background Transitions</h2>
+					<p>
+						You can override background transitions per-slide.
+					</p>
+					<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
+				</section>
+
+				<section>
+					<h2>Pretty Code</h2>
+					<pre><code class="hljs" data-trim contenteditable>
+function linkify( selector ) {
+  if( supports3DTransforms ) {
+
+    var nodes = document.querySelectorAll( selector );
+
+    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      var node = nodes[i];
+
+      if( !node.className ) {
+        node.className += ' roll';
+      }
+    }
+  }
+}
+					</code></pre>
+					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+				</section>
+
+				<section>
+					<h2>Marvelous List</h2>
+					<ul>
+						<li>No order here</li>
+						<li>Or here</li>
+						<li>Or here</li>
+						<li>Or here</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Fantastic Ordered List</h2>
+					<ol>
+						<li>One is smaller than...</li>
+						<li>Two is smaller than...</li>
+						<li>Three!</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Tabular Tables</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Item</th>
+								<th>Value</th>
+								<th>Quantity</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Apples</td>
+								<td>$1</td>
+								<td>7</td>
+							</tr>
+							<tr>
+								<td>Lemonade</td>
+								<td>$2</td>
+								<td>18</td>
+							</tr>
+							<tr>
+								<td>Bread</td>
+								<td>$3</td>
+								<td>2</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<section>
+					<h2>Clever Quotes</h2>
+					<p>
+						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
+					</p>
+					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
+						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
+					</blockquote>
+				</section>
+
+				<section>
+					<h2>Intergalactic Interconnections</h2>
+					<p>
+						You can link between slides internally,
+						<a href="#/2/3">like this</a>.
+					</p>
+				</section>
+
+				<section>
+					<h2>Speaker View</h2>
+					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
+					<p>Press the <em>S</em> key to try it out.</p>
+
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+
+				<section>
+					<h2>Export to PDF</h2>
+					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
+					<iframe data-src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+				</section>
+
+				<section>
+					<h2>Global State</h2>
+					<p>
+						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
+						will be added as a class to the document element when the slide is open. This lets you
+						apply broader style changes, like switching the page background.
+					</p>
+				</section>
+
+				<section data-state="customevent">
+					<h2>State Events</h2>
+					<p>
+						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
+					</p>
+					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+Reveal.addEventListener( 'customevent', function() {
+	console.log( '"customevent" has fired' );
+} );
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Take a Moment</h2>
+					<p>
+						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
+					</p>
+				</section>
+
+				<section>
+					<h2>Much more</h2>
+					<ul>
+						<li>Right-to-left support</li>
+						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
+						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
+						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
+						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
+					</ul>
+				</section>
+
+				<section style="text-align: left;">
+					<h1>THE END</h1>
+					<p>
+						- <a href="http://slides.com">Try the online editor</a> <br>
+						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../libs/reveal.js/lib/js/head.min.js"></script>
+		<script src="../libs/reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../libs/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../libs/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../libs/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../libs/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../libs/reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../libs/reveal.js/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
