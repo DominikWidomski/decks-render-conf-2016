@@ -63,31 +63,6 @@
 					</ul>
 				</section>
 
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section id="nested-one">
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section id="nested-two">
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
 				<section id="lawson">
 					<section>
 						<h2>Bruce Lawson</h2>
@@ -149,24 +124,36 @@
 
 					<section>
 						<h3>Other incoming APIs</h3>
-						<ul>
-							<li class="fragment">Parser API</li>
-							<li class="fragment">Font metrics API</li>
-							<li class="fragment">Custom Paint API</li>
-							<li class="fragment">Composited Scrolling (Worker)</li>
-							<li class="fragment">CSS Regions</li>
-							<li class="fragment">Bluetooth</li>
-							<li class="fragment">Houdini</li>
-							<li class="fragment">CSS Custom Properties</li>
-							<li class="fragment">Geo fencing</li>
-							<li class="fragment">Intersection Observer</li>
-							<li class="fragment">JS Modules</li>
-							<li class="fragment">WebNFC</li>
-							<li class="fragment">WebUSB</li>
-							<li class="fragment">Web Animations</li>
-							<li class="fragment">Offscreen Canvas</li>
-							<li class="fragment">WebGL2</li>
-						</ul>
+						<table>
+							<tbody>
+								<tr>
+									<td>
+										<ul>
+											<li class="fragment">Parser API</li>
+											<li class="fragment">Font metrics API</li>
+											<li class="fragment">Custom Paint API</li>
+											<li class="fragment">Composited Scrolling (Worker)</li>
+											<li class="fragment">CSS Regions</li>
+											<li class="fragment">Bluetooth</li>
+											<li class="fragment">Houdini</li>
+											<li class="fragment">CSS Custom Properties</li>
+										</ul>
+									</td>
+									<td>
+										<ul>
+											<li class="fragment">Geo fencing</li>
+											<li class="fragment">Intersection Observer</li>
+											<li class="fragment">JS Modules</li>
+											<li class="fragment">WebNFC</li>
+											<li class="fragment">WebUSB</li>
+											<li class="fragment">Web Animations</li>
+											<li class="fragment">Offscreen Canvas</li>
+											<li class="fragment">WebGL2</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
 					</section>
 
 				</section>
@@ -199,16 +186,7 @@
 						<p><b>10 things I learned from jQuery</b> <small>Paul Irish</small></p>
 
 						<div>
-							<video controls>
-								<source src="https://www.youtube.com/watch?v=i_qE1iAmjFg">
-								<source src="">
-								<object type="video/ogg" data="https://www.youtube.com/watch?v=i_qE1iAmjFg" width="320" height="240">
-								<param name="src" value="https://www.youtube.com/watch?v=i_qE1iAmjFg">
-								<param name="autoplay" value="false">
-								<param name="autoStart" value="0">
-								<p><a href="https://www.youtube.com/watch?v=i_qE1iAmjFg">Download this video file.</a></p>
-								</object>
-							</video>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/i_qE1iAmjFg" frameborder="0" allowfullscreen></iframe>
 						</div>
 
 						<a href="https://www.youtube.com/watch?v=i_qE1iAmjFg" title="">https://www.youtube.com/watch?v=i_qE1iAmjFg</a>
@@ -260,6 +238,295 @@
 						<h2>Alicia Sedlock</h2>
 						<h3>Front end testing</h3>
 					</section>
+
+					<section>
+						<p>Some frameworks you may have heard of:</p>
+
+						<ul>
+							<li>Webdriver.io</li>
+							<li>Jasmine</li>
+							<li>Chai</li>
+							<li>Mocha</li>
+							<li>PhantomCSS</li>
+							<li>BackstopJS</li>
+						</ul>
+					</section>
+
+					<section>
+						<p>Things to remember:</p>
+
+						<ul>
+							<li>Focus on outcome, not input</li>
+							<li>Testing on as small pieces as possible, units</li>
+							<li>Acceptance test – making sure all small pieces work well together</li>
+							<!-- These line up well with user stories -->
+						</ul>
+					</section>
+
+					<section>
+						<ul>
+							<li>Visual Regression testing (phantomCSS, BackstopJS)
+								<ul>
+									<li>Test components rather than full pages</li>
+									<li>CSS testing could focus only on style guide instead of the whole app if we could use it as a single source of truth</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Accessibility testing!</h3>
+						<ul>
+							<li>Non business logic needs to be tested as well</li>
+							<li>Front end testing  is time consuming so use effectively</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Performance testing</h3>
+						<ul>
+							<li class="fragment">Perfbudget</li>
+							<li class="fragment">gulp size</li>
+							<li class="fragment">perf.js</li>
+						</ul>
+					</section>
+
+					<section>
+						<p>You have a choice, spend your time:</p>
+						<h3>Fixing bugs OR writing test</h3>
+
+						<hr>
+
+						<h3>Build test conscious team</h3>
+						<p>
+							Have an approach, some reasonable policies that everyone can adhere to that will help build a test conscious team and a good test suite
+						</p>
+						<!--
+							Point here is that people need to be aware of tests, be willing to write them, have capacity to write them.
+							The project needs to have something in place that will enforce it at the same time. It gets easier with practice.
+						-->
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>Harry Roberts</h2>
+						<h3>CSS for software engineers for front-end developers</h3>
+					</section>
+
+					<section>
+						<h3>FLOW-MATIC</h3>
+						<p>First English-like data processing language developed under Grace Hopper, between 1955 and 1959.</p>
+						<!-- Some people say Fortran is the first programming language but FLOW-MATIC (originally known as B-0) is the first english-like data processing language -->
+					</section>
+
+					<section>
+						FLOW-MATIC code sample
+						<div data-markdown>
+							<script type="text/template">
+								```
+								(0)  INPUT INVENTORY FILE-A PRICE FILE-B ; OUTPUT PRICED-INV FILE-C UNPRICED-INV
+								     FILE-D ; HSP D .
+								(1)  COMPARE PRODUCT-NO (A) WITH PRODUCT-NO (B) ; IF GREATER GO TO OPERATION 10 ;
+								 	IF EQUAL GO TO OPERATION 5 ; OTHERWISE GO TO OPERATION 2 .
+								(2)  TRANSFER A TO D .
+								(3)  WRITE-ITEM D .
+								(4)  JUMP TO OPERATION 8 .
+								(5)  TRANSFER A TO C .
+								```
+							</script>
+						</div>
+					</section>
+
+					<section>
+						<p>
+							Programming languages, and software engineering have been around for a while.
+						</p>
+						<p class="fragment">
+							The web is a newer aspect of it.
+						</p>
+
+						<p class="fragment">
+							Many of the technical problems we have to deal with on the web as it grows have been problems in computer science for half a century.
+							Let's use some of the well known concepts to our benefit.
+						</p>
+					</section>
+
+					<section>
+						<h3>DRY</h3>
+						<p>Don't Repeat Yourself</p>
+
+						<ul>
+							<li>Don’t repeat KNOWLEDGE / INFORMATION</li>
+							<li>It’s ok for the output to have duplicates, DRY is about maintenance</li>
+							<li>Relevant informations should have a single representation in the system</li>
+						</ul>
+
+						<hr>
+
+						<p>Repetition is better than complex abstraction</p>
+						<p>Use mixins, variables, no same change several times</p>
+						<p>Single source of truth</p>
+					</section>
+
+					<section>
+						<h3>Single responsibility principle</h3>
+
+						<hr>
+
+						<h3>Separation of concerns – each thing responsible for itself</h3>
+
+						<blockquote>
+							<p>
+								Should be able to go from semantics, assistive technology markup, styles, to js functionality one-by-one, and change each aspect of the system without affecting others, i.e. don’t target things from one layer in another layer as it creates dependencies e.g. Do not target [data-attr] or .js-classes in CSS
+							</p>
+						</blockquote>
+					</section>
+
+					<section>
+						<h3>Immutability</h3>
+
+						<p>"State which cannot change"</p>
+
+						<p>Responsive suffixes class = ".class@md"</p>
+						<p>Conditional states - only be this thing in a certain view context</p>
+					</section>
+
+					<section>
+						<h3>Open/Closed principle "open for extension, closed for modification"</h3>
+
+						<ul>
+							<li>Rather than mutating something by overriding, better to use modifier classes</li>
+							<li>Never mutate when overriding – always use classes.</li>
+							<li>Extend rather than modify</li>
+						</ul>
+					</section>
+				</section>
+
+
+				<section>
+					<section>
+						<h2>Sara Soueidan</h2>
+						<h3>SVG in motion</h3>
+					</section>
+
+					<section>
+						<p>Ways of representing SVG in HTML</p>
+
+						<ul>
+							<li>Img</li>
+							<li>picture</li>
+							<li>object</li>
+							<li>iframe</li>
+							<li>svg</li>
+						</ul>
+
+						<p>
+							<code>&lt;img&gt;</code> Can be cached
+						</p>
+					</section>
+
+					<section>
+						<h3>Which to choose?</h3>
+
+						<ul>
+							<li clas="fragment">Is it animated?</li>
+							<li clas="fragment">Is it interactive?</li>
+							<li clas="fragment">What kind of animation? </li>
+							<li clas="fragment">What browser support?</li>
+							<li clas="fragment">What fallback do you need?</li>
+						</ul>
+
+						<p>CSS for simple animations, JS for complex</p>
+					</section>
+
+					<section>
+						<h3>Tools</h3>
+
+						<p>SVGO – SVG optimisation (loses internal SVG structure)</p>
+						<p>
+							Some SVG files may have been carefully prepared with groups and hooks to be used for interactions and animations, those may be removed by optimisation tools
+						</p>
+
+						<hr>
+
+						<p>SVGOMG (SVGO Missing GUI by @jaffathecake)</p>
+
+					</section>
+
+					<section>
+						<h3>Tools</h3>
+
+						<p>Illustrator or Sketch (Illustrator provides better output)</p>
+						<p><a href="http://snapsvg.io/">snapsvg.io</a> - jQuery of SVG</p>
+						<p><a href="https://greensock.com/">greensock</a> - High performance animations</p>
+					</section>
+
+					<section>
+						<h3>Transform-origin</h3>
+
+						<ul>
+							<li><b>%</b> - relative to element bounding box (bbox)</li>
+							<li><b>Px</b> - relative to SVG box
+						</ul>
+
+					</section>
+				</section>
+
+				<section>
+					<h2>Mariko Kosaka</h2>
+					<h3>Drawing on canvas</h3>
+
+					<p><a href="http://64sts.com/">64sts.com</a></p>
+				</section>
+
+				<section>
+					<section>
+						<h2>Katie Fenn</h2>
+						<h3>Chrome inside out</h3>
+					</section>
+
+					<section>
+						<ul>
+							<li class="fragment">Element tab for inspecting elements</li>
+							<li class="fragment">Animations tab – slow down animations</li>
+							<li class="fragment">Network tab seeing network</li>
+							<li class="fragment">Use the debugger not console.log - Watch expressions</li>
+							<li class="fragment">Screenshot tool – can record web page loading</li>
+							<li class="fragment">Snippets – Notes, saved even after closing dev tools</li>
+							<li class="fragment">Performance profiling- records interactions made on site and performance</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Robin Christopherson</h2>
+						<h3>Technology the power and the promise</h3>
+					</section>
+
+					<section>
+						<p>Able bodied people are often 'disabled' on a day to day basis</p>
+
+						<ul>
+							<li>Bright lights blocking screen</li>
+							<li>One handed</li>
+							<li>driving</li>
+						</ul>
+					</section>
+
+					<section>
+						<p>Facebook images using voiceover/talkback describe the images</p>
+
+						<p>Wordlens (Quest Visual now Google Translate)</p>
+
+						<!-- <p>Captiontrot</p> -->
+					</section>
+				</section>
+
+				<section>
+					<h1>Day 2</h1>
 				</section>
 
 				<section>
