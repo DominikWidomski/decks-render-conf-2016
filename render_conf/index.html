@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="../libs/reveal.js/css/reveal.css">
-		<link rel="stylesheet" href="../libs/reveal.js/css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="../libs/reveal.js/css/theme/night.css" id="theme">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="../libs/reveal.js/lib/css/zenburn.css">
@@ -27,6 +27,14 @@
 			link.type = 'text/css';
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
+
+			function changeTheme(name) {
+				document.getElementById('theme').setAttribute('href','../libs/reveal.js/css/theme/'+name+'.css'); return false;
+			}
+
+			window.addEventListener('change-style-one', function() {
+				changeTheme('night');
+			})
 		</script>
 
 		<!--[if lt IE 9]>
@@ -57,7 +65,7 @@
 						<small>Attendees: Ben / Dom / Ed / Ian / Paddy / Sam</small>
 					</p>
 				</section>
-
+<!-- 
 				<section id="abstract">
 					<h2>Abstract</h2>
 					<ul>
@@ -71,7 +79,7 @@
 						<li>Recap</li>
 						<li>Evaluation</li>
 					</ul>
-				</section>
+				</section> -->
 
 
 
@@ -85,7 +93,7 @@
 
 
 
-				<section>
+				<section data-state="change-style-one" data-background="#A53F2B">
 					<h1>Back to the web</h1>
 				</section>
 
@@ -183,7 +191,6 @@
 							</tbody>
 						</table>
 					</section>
-
 				</section>
 
 				<section>
@@ -356,7 +363,7 @@
 
 
 
-				<section>
+				<section data-background="#C4A69D">
 					<h1>CSS, SVG and all things 3D</h1>
 				</section>
 
@@ -548,7 +555,7 @@
 
 
 
-				<section>
+				<section data-background="#345159">
 					<h1>Technical</h1>
 				</section>
 
@@ -764,7 +771,7 @@
 
 
 
-				<section>
+				<section data-background="#7C8078">
 					<h1>Food for thought</h1>
 				</section>
 
