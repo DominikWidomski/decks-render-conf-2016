@@ -73,15 +73,34 @@
 					</ul>
 				</section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+				<section>
+					<h1>Back to the web</h1>
+				</section>
+
 				<section id="lawson">
 					<section>
 						<h2>Bruce Lawson</h2>
 						<h3>web.next</h3>
-						<p class="fragment">
+					</section>
+
+					<section>
+						<p>
 							The web is under threat from native platforms...
 						</p>
 						<p class="fragment">
-							... or rather, it was.
+							but it's fighting back!
 						</p>
 					</section>
 
@@ -98,13 +117,6 @@
 							</li>
 							<li>Web apps require less storage to install</li>
 							<!-- the baseline is the shortcut to the web app -->
-							<li></li>
-						</ul>
-					</section>
-
-					<section>
-						<ul>
-							<li>AppCache - Confusing, unclear, obfuscated manifest based API, magical black box</li>
 						</ul>
 					</section>
 
@@ -117,6 +129,12 @@
 							<!-- First level citizen in the apps carousel if you choose so, which is specified by... -->
 							<li class="fragment">Manifest file in JSON</li>
 							<!-- Much like android development ? -->
+						</ul>
+					</section>
+
+					<section>
+						<ul>
+							<li>AppCache - Confusing, unclear, obfuscated manifest based API, magical black box</li>
 						</ul>
 					</section>
 
@@ -170,26 +188,69 @@
 
 				<section>
 					<section>
-						<h2>Jack Franklin</h2>
-						<h3>jQuery pasty and present</h3>
-						<p>How jQuery influences the web</p>
+						<h2>Jake Archbald</h2>
+						<h3>show them what you got</h3>
 					</section>
 
 					<section>
-						<p>Original jQuery source code is available with annotations</p>
+						<h3>'Lie-Fi'</h3>
+					</section>
 
-						<div data-markdown>
-							<script type="text/template">
-								```
-								<section data-markdown>
-								  ## Paste some jquery source
+					<section>
+						<h3>Service Worker</h3>
 
-								  ...
-								</section>
-								```
-							</script>
-						</div>
-						<a href="#" title="">source</a> (Search “support:”)
+						<img src="assets/the-offline-cookbook.png" alt="">
+					</section>
+
+					<section>
+						<h3>Why?</h3>
+
+						<ul>
+							<li>Storing requests and response</li>
+							<li>Custom 404 pages – guardian.com has crossword</li>
+							<li>'Offline first' concept – load from cache first then load the content</li>
+							<li>Unlike cache it won’t remove after a period of time</li>
+							<li>Background Syncing</li>
+							<li>Streaming</li>
+						</ul>
+
+						<hr>
+
+						<ul>
+							<li>Page shell -> slower</li>
+							<li>Web Vs Single page app. Single page is slower</li>
+						</ul>
+					</section>
+
+					<section style="text-align: left;">
+						<h3>Resources:</h3>
+						<ul>
+							<li>
+								<a target="_blank" href="https://jakearchibald-gcm.appspot.com/">
+									https://jakearchibald-gcm.appspot.com/
+								</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://github.com/jakearchibald/indexeddb-promised">IndexedDB Promised</a>
+								<!-- IndexedDB = awkward API. Use IDB that uses promises -->
+							</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Jack Franklin</h2>
+						<h3>How jQuery has influenced The Web: Now and Beyond</h3>
+					</section>
+
+					<section>
+						<p>
+							<a target="_blank" href="http://genius.it/ejohn.org/files/jquery-original.html" title="">
+							Original jQuery source code is available with annotations
+							</a>
+							<small>(Search “support:”)</small>
+						</p>
 					</section>
 
 					<section>
@@ -199,10 +260,173 @@
 							<iframe width="560" height="315" src="https://www.youtube.com/embed/i_qE1iAmjFg" frameborder="0" allowfullscreen></iframe>
 						</div>
 
-						<a href="https://www.youtube.com/watch?v=i_qE1iAmjFg" title="">https://www.youtube.com/watch?v=i_qE1iAmjFg</a>
+						<a target="_blank" href="https://www.youtube.com/watch?v=i_qE1iAmjFg" title="">https://www.youtube.com/watch?v=i_qE1iAmjFg</a>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Ola Gasidlo</h2>
+						<h3>Cool, What now? I’m Offline</h3>
+					</section>
+
+					<section>
+						<p>
+							Offline first is NOT progressive-enhancement.
+						</p>
+						<p>
+							We need solid applications that work that match basic needs
+						</p>
+					</section>
+
+					<section>
+						<h3>Mongol Rally</h3>
+						<p>
+							Phone array ringing binary.
+						</p>
+
+						<h3>Network bus</h3>
+						<p>
+							Make request on local area network, bus comes around, receives those requests, returns later with responses to them.
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Jermey Keith</h2>
+						<h3>Resilience</h3>
+					</section>
+
+					<section>
+						<h3>Robustness principle</h3>
+
+						<blockquote>
+							&ldquo;Be conservative in what you send, be liberal in what you accept&rdquo;
+						</blockquote>
+					</section>
+
+					<section style="text-align: left;">
+						<p>The web has always been built for resiliance</p>
+						<p>HTML and CSS, being declarative, ignore things they can't handle</p>
+						<p>HTML1 = 21 -> HTML5 = 121 elements</p>
+					</section>
+
+					<section>
+						Picture element
+
+						<div data-markdown>
+							<script type="text/template">
+								```html
+								<picture>
+								  <source media="(min-width: 40em)"
+								    srcset="big.jpg 1x, big-hd.jpg 2x">
+								  <source 
+								    srcset="small.jpg 1x, small-hd.jpg 2x">
+								  <img src="fallback.jpg" alt="">
+								</picture>
+								```
+							</script>
+						</div>
+					</section>
+
+					<section>
+						<ol>
+							<li>Identify core functionality</li>
+							<li>make functionality available using simplest possible technology</li>
+							<li>Enhance!</li>
+						</ol>
+					</section>
+				</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<section>
+					<h1>CSS, SVG and all things 3D</h1>
+				</section>
+
+				<section>
+					<section>
+						<h2>Sara Soueidan</h2>
+						<h3>SVG in motion</h3>
+					</section>
+
+					<section>
+						<p>Ways of representing SVG in HTML</p>
+
+						<ul>
+							<li>Img</li>
+							<li>picture</li>
+							<li>object</li>
+							<li>iframe</li>
+							<li>svg</li>
+						</ul>
+
+						<p>
+							<code>&lt;img&gt;</code> Can be cached
+						</p>
+					</section>
+
+					<section>
+						<h3>Which to choose?</h3>
+
+						<ul>
+							<li clas="fragment">Is it animated?</li>
+							<li clas="fragment">Is it interactive?</li>
+							<li clas="fragment">What kind of animation? </li>
+							<li clas="fragment">What browser support?</li>
+							<li clas="fragment">What fallback do you need?</li>
+						</ul>
+
+						<p>CSS for simple animations, JS for complex</p>
+					</section>
+
+					<section>
+						<h3>Tools</h3>
+
+						<p>SVGO – SVG optimisation (loses internal SVG structure)</p>
+						<p>
+							Some SVG files may have been carefully prepared with groups and hooks to be used for interactions and animations, those may be removed by optimisation tools
+						</p>
+
+						<hr>
+
+						<p>SVGOMG (SVGO Missing GUI by @jaffathecake)</p>
 
 					</section>
 
+					<section>
+						<h3>Tools</h3>
+
+						<p>Illustrator or Sketch (Illustrator provides better output)</p>
+						<p><a target="_blank" href="http://snapsvg.io/">snapsvg.io</a> - jQuery of SVG</p>
+						<p><a target="_blank" href="https://greensock.com/">greensock</a> - High performance animations</p>
+					</section>
+
+					<section>
+						<h3>Transform-origin</h3>
+
+						<ul>
+							<li><b>%</b> - relative to element bounding box (bbox)</li>
+							<li><b>Px</b> - relative to SVG box
+						</ul>
+
+					</section>
 				</section>
 
 				<section>
@@ -242,6 +466,111 @@
 						</ul>
 					</section>
 				</section>
+
+				<section>
+					<section>
+						<h2>Martin nauman</h2>
+						<h3>The next frontier: 3D and immersion</h3>
+					</section>
+
+					<section style="text-align: left;">
+						<p>
+							Changing canvas means doing in JavaScript means doing something on the main thread.
+							2 million operations recursively. Ok on simple
+						</p>
+
+						<p>
+							WebGL – Not just games, Unity great webGL exporter
+						</p>
+
+						<p>
+							WebGL – Brilliant progressive enhanced
+						</p>
+
+						<p>
+							Problem with WebGL – verbose
+						</p>
+
+						<p>
+							WebVR
+						</p>
+
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Ricardo Cabello</h2>
+						<h3>Programming animations</h3>
+					</section>
+
+					<section>
+						<p>
+							Overview of the history of three.js and its eco system, with many inspiring examples.
+						</p>
+					</section>
+
+					<section>
+						<p>
+							WebGl video editing app/Three.js
+						</p>
+						<p>
+							Wilderness downtown
+						</p>
+					</section>
+				</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<section>
+					<h1>Technical</h1>
+				</section>
+
+				<section>
+					<section>
+						<h2>Katie Fenn</h2>
+						<h3>Chrome inside out</h3>
+					</section>
+
+					<section>
+						<ul>
+							<li class="fragment">Element tab for inspecting elements</li>
+							<li class="fragment">Animations tab – slow down animations</li>
+							<li class="fragment">Network tab seeing network</li>
+							<li class="fragment">Use the debugger not console.log - Watch expressions</li>
+							<li class="fragment">Screenshot tool – can record web page loading</li>
+							<li class="fragment">Snippets – Notes, saved even after closing dev tools</li>
+							<li class="fragment">Performance profiling- records interactions made on site and performance</li>
+						</ul>
+					</section>
+				</section>
+
 
 				<section>
 					<section>
@@ -316,7 +645,127 @@
 							The project needs to have something in place that will enforce it at the same time. It gets easier with practice.
 						-->
 					</section>
+				</section>
 
+
+				<section>
+					<section>
+						<h2>Lee Byron</h2>
+						<h3>Immutable User Interfaces</h3>
+					</section>
+
+					<section>
+						<h3>
+							Vetruvian principles
+						</h3>
+
+						<p>
+							Architecture is about choosing elements of abstractions
+						</p>
+
+						<ul>
+							<li class="fragment">Firmitas (Durability) – robustness, logevity</li>
+							<li class="fragment">Utilitas (Utility) – relevant to how it will be used</li>
+							<li class="fragment">Venustas (Beauty) – proportion, repetition, and scale to be desirable</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>React / Flux</h3>
+
+						<div style="text-align: left;">
+							<p>Immutability - Restricting what can change</p>
+							<p>Immutable App Architecture</p>
+							<p>React manages UI Views and models</p>
+							<p>
+								<a target="_blank" href="https://facebook.github.io/react/blog/2015/05/01/graphql-introduction.html" title="GraphQL Intro">GraphQL</a>
+							</p>
+						</div>
+					</section>
+				</section>
+
+
+				<section>
+					<section>
+						<h2>Gordon Williams</h2>
+						<h3>The Physical Web</h3>
+					</section>
+
+					<section>
+						<h3>Microcontrollers</h3>
+
+						<p>able to programme them and receive input from a variety of sources</p>
+
+						<p>10 million ARM based microcontrollers sold in 2013, 50 billion since 1991</p>
+					</section>
+
+					<section>
+						<h3>Arduino </h3>
+						<p>Most peoples first into to Micro Controllers</p>
+
+						<div class="fragment">
+							<h3>BBC microbit</h3>
+							<p>
+								built-in motion detection, compass, and Bluetooth given out free to kids in year 7 in the UK
+							</p>
+						</div>
+
+						<div class="fragment">
+							<h3>RaspberryPi</h3>
+							<p>JS on Micro Controller</p>
+						</div>
+					</section>
+
+					<section>
+						<h3>Espruino Pico <small><a target="_blank" href="http://espruino.com">espruino.com</a></small></h3>
+						<ul>
+							<li>Runs JS</li>
+							<li>Array of sensors available</li>
+							<li>Web IDE available</li>
+							<li>Ethernet Webserver through Ethernet</li>
+							<li>Opensource</li>
+						</ul>
+					</section>
+				</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<section>
+					<h1>Food for thought</h1>
 				</section>
 
 				<section>
@@ -414,100 +863,11 @@
 					</section>
 				</section>
 
-
-				<section>
-					<section>
-						<h2>Sara Soueidan</h2>
-						<h3>SVG in motion</h3>
-					</section>
-
-					<section>
-						<p>Ways of representing SVG in HTML</p>
-
-						<ul>
-							<li>Img</li>
-							<li>picture</li>
-							<li>object</li>
-							<li>iframe</li>
-							<li>svg</li>
-						</ul>
-
-						<p>
-							<code>&lt;img&gt;</code> Can be cached
-						</p>
-					</section>
-
-					<section>
-						<h3>Which to choose?</h3>
-
-						<ul>
-							<li clas="fragment">Is it animated?</li>
-							<li clas="fragment">Is it interactive?</li>
-							<li clas="fragment">What kind of animation? </li>
-							<li clas="fragment">What browser support?</li>
-							<li clas="fragment">What fallback do you need?</li>
-						</ul>
-
-						<p>CSS for simple animations, JS for complex</p>
-					</section>
-
-					<section>
-						<h3>Tools</h3>
-
-						<p>SVGO – SVG optimisation (loses internal SVG structure)</p>
-						<p>
-							Some SVG files may have been carefully prepared with groups and hooks to be used for interactions and animations, those may be removed by optimisation tools
-						</p>
-
-						<hr>
-
-						<p>SVGOMG (SVGO Missing GUI by @jaffathecake)</p>
-
-					</section>
-
-					<section>
-						<h3>Tools</h3>
-
-						<p>Illustrator or Sketch (Illustrator provides better output)</p>
-						<p><a href="http://snapsvg.io/">snapsvg.io</a> - jQuery of SVG</p>
-						<p><a href="https://greensock.com/">greensock</a> - High performance animations</p>
-					</section>
-
-					<section>
-						<h3>Transform-origin</h3>
-
-						<ul>
-							<li><b>%</b> - relative to element bounding box (bbox)</li>
-							<li><b>Px</b> - relative to SVG box
-						</ul>
-
-					</section>
-				</section>
-
 				<section>
 					<h2>Mariko Kosaka</h2>
 					<h3>Drawing on canvas</h3>
 
 					<p><a href="http://64sts.com/">64sts.com</a></p>
-				</section>
-
-				<section>
-					<section>
-						<h2>Katie Fenn</h2>
-						<h3>Chrome inside out</h3>
-					</section>
-
-					<section>
-						<ul>
-							<li class="fragment">Element tab for inspecting elements</li>
-							<li class="fragment">Animations tab – slow down animations</li>
-							<li class="fragment">Network tab seeing network</li>
-							<li class="fragment">Use the debugger not console.log - Watch expressions</li>
-							<li class="fragment">Screenshot tool – can record web page loading</li>
-							<li class="fragment">Snippets – Notes, saved even after closing dev tools</li>
-							<li class="fragment">Performance profiling- records interactions made on site and performance</li>
-						</ul>
-					</section>
 				</section>
 
 				<section>
@@ -534,79 +894,6 @@
 						<!-- <p>Captiontrot</p> -->
 					</section>
 				</section>
-
-				<section>
-					<h1>Day 2</h1>
-				</section>
-
-				<section>
-					<section>
-						<h2>Jake Archbald</h2>
-						<h3>show them what you got</h3>
-					</section>
-
-					<section>
-						<h3>'Lie-Fi'</h3>
-					</section>
-
-					<section>
-						<h3>Service Worker</h3>
-
-						<img src="assets/the-offline-cookbook.png" alt="">
-					</section>
-
-					<section>
-						<h3>Why?</h3>
-
-						<ul>
-							<li>Storing requests and response</li>
-							<li>Custom 404 pages – guardian.com has crossword</li>
-							<li>'Offline first' concept – load from cache first then load the content</li>
-							<li>Unlike cache it won’t remove after a period of time</li>
-							<li>Background Syncing</li>
-							<li>Streaming</li>
-						</ul>
-
-						<hr>
-
-						<ul>
-							<li>Page shell -> slower</li>
-							<li>Web Vs Single page app. Single page is slower</li>
-						</ul>
-					</section>
-
-					<section style="text-align: left;">
-						<h3>Resources:</h3>
-						<ul>
-							<li>
-								<a href="https://jakearchibald-gcm.appspot.com/">
-									https://jakearchibald-gcm.appspot.com/
-								</a>
-							</li>
-							<li>
-								<a href="https://github.com/jakearchibald/indexeddb-promised">IndexedDB Promised</a>
-								<!-- IndexedDB = awkward API. Use IDB that uses promises -->
-							</li>
-						</ul>
-					</section>
-				</section>
-
-				<section>
-					<section>
-						<h2>Ricardo Cabello</h2>
-						<h3>Programming animations</h3>
-					</section>
-
-					<section>
-						<p>
-							WebGl video editing app/Three.js
-						</p>
-						<p>
-							Wilderness downtown
-						</p>
-					</section>
-				</section>
-
 
 				<section>
 					<section>
@@ -680,107 +967,29 @@
 				</section>
 
 
+
 				<section>
 					<section>
-						<h2>Gordon Williams</h2>
-						<h3>The Physical Web</h3>
+						<h2>Chad Gowler</h2>
+						<h3>How to ask about gender</h3>
 					</section>
 
 					<section>
-						<h3>Microcontrollers</h3>
-
-						<p>able to programme them and receive input from a variety of sources</p>
-
-						<p>10 million ARM based microcontrollers sold in 2013, 50 billion since 1991</p>
+						How can we provide a good, inclusive, experience for everyone, however they may choose to define themselves.
 					</section>
 
 					<section>
-						<h3>Arduino </h3>
-						<p>Most peoples first into to Micro Controllers</p>
+						<h3>When asking for personal information...</h3>
 
-						<div class="fragment">
-							<h3>BBC microbit</h3>
-							<p>
-								built-in motion detection, compass, and Bluetooth given out free to kids in year 7 in the UK
-							</p>
-						</div>
-
-						<div class="fragment">
-							<h3>RaspberryPi</h3>
-							<p>JS on Micro Controller</p>
-						</div>
-					</section>
-
-					<section>
-						<h3>Espruino Pico <small><a href="http://espruino.com">espruino.com</a></small></h3>
 						<ul>
-							<li>Runs JS</li>
-							<li>Array of sensors available</li>
-							<li>Web IDE available</li>
-							<li>Ethernet Webserver through Ethernet</li>
-							<li>Opensource</li>
+							<li class="fragment">Who needs it?</li>
+							<li class="fragment">What do they need it for? (individual reasons, not vague statements about statistics)</li>
+							<li class="fragment">Is it required? Can users skip it?</li>
+							<li class="fragment">What if it’s false? (both what do users see, and what will effect will it have on your system?)</li>
 						</ul>
 					</section>
 				</section>
 
-				<section>
-					<section>
-						<h2>Ola Gasidlo</h2>
-						<h3>Cool, What now? I’m Offline</h3>
-					</section>
-
-					<section>
-						<p>
-							Offline first is NOT progressive-enhancement.
-						</p>
-						<p>
-							We need solid applications that work that match basic needs
-						</p>
-					</section>
-
-					<section>
-						<h3>Mongol Rally</h3>
-						<p>
-							Phone array ringing binary.
-						</p>
-
-						<h3>Network bus</h3>
-						<p>
-							Make request on local area network, bus comes around, receives those requests, returns later with responses to them.
-						</p>
-					</section>
-				</section>
-
-				<section>
-					<section>
-						<h2>Martin nauman</h2>
-						<h3>The next frontier: 3D and immersion</h3>
-					</section>
-
-					<section style="text-align: left;">
-						<p>
-							Changing canvas means doing in JavaScript means doing something on the main thread.
-							2 million operations recursively. Ok on simple
-						</p>
-
-						<p>
-							WebGL – Not just games, Unity great webGL exporter
-						</p>
-
-						<p>
-							WebGL – Brilliant progressive enhanced
-						</p>
-
-						<p>
-							Problem with WebGL – verbose
-						</p>
-
-						<p>
-							WebVR
-						</p>
-
-					</section>
-				</section>
 
 
 				<section>
@@ -841,87 +1050,40 @@
 					</section>
 				</section>
 
+
 				<section>
 					<section>
-						<h2>Lee Byron</h2>
-						<h3>Immutable User Interfaces</h3>
+						<h2>Frederik Vanhoutte</h2>
+						<h3>Rendering the obvious</h3>
 					</section>
 
 					<section>
-						<h3>
-							Vetruvian principles
-						</h3>
+						<p>Crazy Belgian physicist talking about electromagnetic spectrum, reflections, and refractions.</p>
 
+						<p class="fragment">
+							... but also about creativity, inspiration, and love.
+						</p>
+					</section>
+
+					<section>
 						<p>
-							Architecture is about choosing elements of abstractions
+							We generally crave creativity but find it not desireable in certain areas, i.e. a creative brain surgeon or a creative fork lift operator.
 						</p>
 
-						<ul>
-							<li class="fragment">Firmitas (Durability) – robustness, logevity</li>
-							<li class="fragment">Utilitas (Utility) – relevant to how it will be used</li>
-							<li class="fragment">Venustas (Beauty) – proportion, repetition, and scale to be desirable</li>
-						</ul>
+						<p class="fragment">
+							We learn things in boxes, which may make the bigger picture less obvious.
+						</p>
 					</section>
 
 					<section>
-						<h3>React / Flux</h3>
-
-						<div style="text-align: left;">
-							<p>Immutability - Restricting what can change</p>
-							<p>Immutable App Architecture</p>
-							<p>React manages UI Views and models</p>
-							<p>
-								<a href="https://facebook.github.io/react/blog/2015/05/01/graphql-introduction.html" title="GraphQL Intro">GraphQL</a>
-							</p>
-						</div>
-					</section>
-				</section>
-
-
-				<section>
-					<section>
-						<h2>Jermey Keith</h2>
-						<h3>Resilience</h3>
-					</section>
-
-					<section>
-						<h3>Robustness principle</h3>
-
 						<blockquote>
-							&ldquo;Be conservative in what you send, be liberal in what you accept&rdquo;
+							<p>
+								&ldquo;Building a ship is not about making sails, forging nails and reading the stars. Given a taste of the sea, it is nothing less than a community in love.&rdquo;
+							</p>
+							<footer>
+								<small>Antoine de Saint-Exupery</small>
+							</footer>
 						</blockquote>
-					</section>
-
-					<section style="text-align: left;">
-						<p>The web has always been built for resiliance</p>
-						<p>HTML and CSS, being declarative, ignore things they can't handle</p>
-						<p>HTML1 = 21 -> HTML5 = 121 elements</p>
-					</section>
-
-					<section>
-						Picture element
-
-						<div data-markdown>
-							<script type="text/template">
-								```html
-								<picture>
-								  <source media="(min-width: 40em)"
-								    srcset="big.jpg 1x, big-hd.jpg 2x">
-								  <source 
-								    srcset="small.jpg 1x, small-hd.jpg 2x">
-								  <img src="fallback.jpg" alt="">
-								</picture>
-								```
-							</script>
-						</div>
-					</section>
-
-					<section>
-						<ol>
-							<li>Identify core functionality</li>
-							<li>make functionality available using simplest possible technology</li>
-							<li>Enhance!</li>
-						</ol>
 					</section>
 				</section>
 
