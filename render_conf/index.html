@@ -14,11 +14,11 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="../libs/reveal.js/css/reveal.css">
-		<link rel="stylesheet" href="../libs/reveal.js/css/theme/night.css" id="theme">
+		<link rel="stylesheet" href="/libs/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="/libs/reveal.js/css/theme/night.css" id="theme">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="../libs/reveal.js/lib/css/zenburn.css">
+		<link rel="stylesheet" href="/libs/reveal.js/lib/css/zenburn.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -29,7 +29,7 @@
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 
 			function changeTheme(name) {
-				document.getElementById('theme').setAttribute('href','../libs/reveal.js/css/theme/'+name+'.css'); return false;
+				document.getElementById('theme').setAttribute('href','/libs/reveal.js/css/theme/'+name+'.css'); return false;
 			}
 
 			window.addEventListener('change-style-one', function() {
@@ -116,7 +116,6 @@
 						<ul>
 							<li>What do consumers want?</li>
 							<li>People have moved to native apps <small>(80% apps vs 20% web)</small></li>
-							<!-- People want native experiences, ease of access, offline accessibility, data resiliance etc. -->
 							<li>Storage on mobiles is often preferred to be used for personal data
 								<ul>
 									<li>Users will sacrifice app storage for more photos, videos, messages etc.</li>
@@ -124,8 +123,16 @@
 								</ul>
 							</li>
 							<li>Web apps require less storage to install</li>
-							<!-- the baseline is the shortcut to the web app -->
 						</ul>
+
+						<aside class="notes">
+							<p>
+								People want native experiences, ease of access, offline accessibility, data resiliance etc.
+							</p>
+							<p>
+								the baseline is the shortcut to the web app
+							</p>
+						</aside>
 					</section>
 
 					<section>
@@ -134,10 +141,17 @@
 							<li class="fragment">Icon on homescreen</li>
 							<li class="fragment">Splash Screen</li>
 							<li class="fragment">Integrated with device</li>
-							<!-- First level citizen in the apps carousel if you choose so, which is specified by... -->
 							<li class="fragment">Manifest file in JSON</li>
-							<!-- Much like android development ? -->
 						</ul>
+
+						<aside class="notes">
+							<p>
+								First level citizen in the apps carousel if you choose so, which is specified by... (manifest)
+							</p>
+							<p>
+								Manifest much like android development
+							</p>
+						</aside>
 					</section>
 
 					<section>
@@ -239,42 +253,19 @@
 							</li>
 							<li>
 								<a target="_blank" href="https://github.com/jakearchibald/indexeddb-promised">IndexedDB Promised</a>
-								<!-- IndexedDB = awkward API. Use IDB that uses promises -->
 							</li>
 						</ul>
+						<aside class="notes">
+							IndexedDB = awkward API. Use IDB that uses promises
+						</aside>
 					</section>
 				</section>
 
-				<section>
-					<section>
-						<h2>Jack Franklin</h2>
-						<h3>How jQuery has influenced The Web: Now and Beyond</h3>
-					</section>
-
-					<section>
-						<p>
-							<a target="_blank" href="http://genius.it/ejohn.org/files/jquery-original.html" title="">
-							Original jQuery source code is available with annotations
-							</a>
-							<small>(Search “support:”)</small>
-						</p>
-					</section>
-
-					<section>
-						<p><b>10 things I learned from jQuery</b> <small>Paul Irish</small></p>
-
-						<div>
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/i_qE1iAmjFg" frameborder="0" allowfullscreen></iframe>
-						</div>
-
-						<a target="_blank" href="https://www.youtube.com/watch?v=i_qE1iAmjFg" title="">https://www.youtube.com/watch?v=i_qE1iAmjFg</a>
-					</section>
-				</section>
 
 				<section>
 					<section>
 						<h2>Ola Gasidlo</h2>
-						<h3>Cool, What now? I’m Offline</h3>
+						<h3>Cool, I'm offline. What now?</h3>
 					</section>
 
 					<section>
@@ -298,6 +289,7 @@
 						</p>
 					</section>
 				</section>
+
 
 				<section>
 					<section>
@@ -328,7 +320,7 @@
 								<picture>
 								  <source media="(min-width: 40em)"
 								    srcset="big.jpg 1x, big-hd.jpg 2x">
-								  <source 
+								  <source
 								    srcset="small.jpg 1x, small-hd.jpg 2x">
 								  <img src="fallback.jpg" alt="">
 								</picture>
@@ -556,8 +548,36 @@
 
 
 				<section data-background="#345159">
-					<h1>Technical</h1>
+					<h1>Tooling</h1>
 				</section>
+
+
+				<section>
+					<section>
+						<h2>Jack Franklin</h2>
+						<h3>How jQuery has influenced The Web: Now and Beyond</h3>
+					</section>
+
+					<section>
+						<p>
+							<a target="_blank" href="http://genius.it/ejohn.org/files/jquery-original.html" title="">
+							Original jQuery source code is available with annotations
+							</a>
+							<small>(Search “support:”)</small>
+						</p>
+					</section>
+
+					<section>
+						<p><b>10 things I learned from jQuery</b> <small>Paul Irish</small></p>
+
+						<div>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/i_qE1iAmjFg" frameborder="0" allowfullscreen></iframe>
+						</div>
+
+						<a target="_blank" href="https://www.youtube.com/watch?v=i_qE1iAmjFg" title="">https://www.youtube.com/watch?v=i_qE1iAmjFg</a>
+					</section>
+				</section>
+
 
 				<section>
 					<section>
@@ -647,10 +667,10 @@
 						<p>
 							Have an approach, some reasonable policies that everyone can adhere to that will help build a test conscious team and a good test suite
 						</p>
-						<!--
+						<aside class="notes">
 							Point here is that people need to be aware of tests, be willing to write them, have capacity to write them.
 							The project needs to have something in place that will enforce it at the same time. It gets easier with practice.
-						-->
+						</aside>
 					</section>
 				</section>
 
@@ -800,6 +820,7 @@
 								(3)  WRITE-ITEM D .
 								(4)  JUMP TO OPERATION 8 .
 								(5)  TRANSFER A TO C .
+								...
 								```
 							</script>
 						</div>
@@ -871,10 +892,16 @@
 				</section>
 
 				<section>
-					<h2>Mariko Kosaka</h2>
-					<h3>Drawing on canvas</h3>
+					<section>
+						<h2>Mariko Kosaka</h2>
+						<h3>Drawing on canvas</h3>
+					</section>
 
-					<p><a href="http://64sts.com/">64sts.com</a></p>
+					<section>
+						<p><a href="http://64sts.com/">64sts.com</a></p>
+
+						<p>Absolute madness, talking about knitting, canvas, and twitter's PNGs.</p>
+					</section>
 				</section>
 
 				<section>
@@ -898,7 +925,7 @@
 
 						<p>Wordlens (Quest Visual now Google Translate)</p>
 
-						<!-- <p>Captiontrot</p> -->
+						<p>Captiontrot</p>
 					</section>
 				</section>
 
@@ -983,6 +1010,8 @@
 
 					<section>
 						How can we provide a good, inclusive, experience for everyone, however they may choose to define themselves.
+
+						<p>Mr / Ms / Mx</p>
 					</section>
 
 					<section>
@@ -1050,8 +1079,8 @@
 					</section>
 
 					<section style="text-align: left;">
-						<p>Programmes must be written for people to read</p>
-						<p>Humans designed to see patterns</p>
+						<p>Programs must be written for people to read</p>
+						<p>Humans are well capable of recognising patterns</p>
 						<hr>
 						<p>e.g. Classes – ES6 enables classes but underlyingly not a class based language</p>
 					</section>
@@ -1109,8 +1138,8 @@
 
 		</div>
 
-		<script src="../libs/reveal.js/lib/js/head.min.js"></script>
-		<script src="../libs/reveal.js/js/reveal.js"></script>
+		<script src="/libs/reveal.js/lib/js/head.min.js"></script>
+		<script src="/libs/reveal.js/js/reveal.js"></script>
 
 		<script>
 
@@ -1125,12 +1154,12 @@
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-					{ src: '../libs/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: '../libs/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../libs/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../libs/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: '../libs/reveal.js/plugin/zoom-js/zoom.js', async: true },
-					{ src: '../libs/reveal.js/plugin/notes/notes.js', async: true }
+					{ src: '/libs/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '/libs/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '/libs/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '/libs/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '/libs/reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: '/libs/reveal.js/plugin/notes/notes.js', async: true }
 				]
 			});
 
